@@ -1,0 +1,211 @@
+/* ===== RESET ===== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #111;
+    background: #fff;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ===== BASE STYLES ===== */
+body{
+    display: flex;
+    justify-content: center;
+}
+.container {
+    margin-top: 5%;
+}
+
+h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.box-label {
+    color: grey;
+    font-size: 16px;
+    display: flex;
+    width: 200px;
+    height: 20px;
+}
+
+/* ===== ITEM ADDER ===== */
+.item-adder {
+    display: flex;
+    align-items: flex-end;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+#nv-input {
+    width: 45vw;
+    font-size: 14px;
+    padding: 4px 6px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+.item-adder button {
+    padding: 4px 12px;
+    font-size: 13px;
+}
+
+
+/* ===== ITEM LIST  ===== */
+.item-list-container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+#nv-list {
+    list-style: none;
+    width: 45vw;
+    padding: 4px 6px;
+    height: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow-y: auto;
+}
+
+
+#nv-list li {
+    padding: 4px 6px;
+    box-shadow: #eee 1px 1px 1px 1px;
+    font-size: 18px;
+}
+
+#nv-list li.selected {
+    background-color: #f0f8ff;
+}
+
+.control-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.control-buttons button {
+    width: 100px;
+    padding: 4px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Phones 0 - 480px */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    .container {
+        width: 95%;
+        margin-top: 24px;
+    }
+
+    #nv-list {
+        width: 100%;
+       height: 260px;
+    }
+
+    .control-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .control-buttons button {
+        width: 100%;
+    }
+}
+
+/* Tablets & Phones 480 - 768px */
+@media (max-width: 768px) {
+    .container {
+        margin-top: 40px;
+        width: 90%;
+    }
+
+    .item-adder {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+    }
+    #nv-list {
+        width: 100%;
+    }
+
+    .item-adder input,
+    .item-adder button {
+        width: 100%;
+    }
+
+    .item-list-container {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .control-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .control-buttons button {
+        flex: 1 1 calc(50% - 6px);
+    }
+}
+
+/* Tablets - Laptops 768 ‑ 1279px */
+@media (min-width: 768px) and (max-width: 1279px) {
+    .item-adder input {
+        min-width: 550px;
+    }
+    #nv-list {
+        min-width: 550px;
+    }
+
+    .container {
+        max-width: 960px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .item-adder {
+        gap: 40px;
+    }
+
+    .item-list-container {
+        gap: 40px;
+    }
+
+    .control-buttons {
+        gap: 16px;
+    }
+    .box-label{
+        font-size: 18px;
+    }
+}

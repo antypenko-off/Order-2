@@ -1,0 +1,57 @@
+/* ===== BASE STYLES ===== */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    margin: 20px;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    margin: 20px;
+}
+
+/* ===== POSTS ===== */
+.post {
+    width: 40%;
+    margin: 0 auto;
+    background-color: #fafafa;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ===== COMMENTS ===== */
+.comments {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    justify-content: center;
+    padding: 20px;
+    gap: 10px;
+
+}
+
+.comment {
+    display: flex;
+    flex-direction: column;
+    background-color: #fafafa;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 18px;
+    gap: 5px;
+}
+
+
+

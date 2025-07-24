@@ -1,0 +1,66 @@
+/* ===== BASE STYLES ===== */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    margin: 20px;
+}
+a{
+    color: #0048ff;
+}
+/* ===== USERS ===== */
+.user {
+    width: 40%;
+    margin: 0 auto;
+    background-color: #f6f6f6;
+    padding: 20px;
+    border: 2px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ===== POSTS ===== */
+.loadPosts {
+    display: block;
+    width: 90%;
+    margin: 30px auto;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+}
+
+.loadPosts:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+
+.posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    padding: 20px;
+    gap: 10px;
+}
+
+.posts .post {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #fafafa;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 18px;
+}
+
+.posts .post a{
+    color: #007bff;
+}

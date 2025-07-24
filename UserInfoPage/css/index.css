@@ -1,0 +1,33 @@
+/* ===== BASE STYLES ===== */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    margin: 20px;
+}
+
+/* ===== USERS ===== */
+.users {
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.user {
+    margin: 8px 20px 0 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgb(198, 198, 198);
+    background-color: rgba(0, 0, 0, 0.06);
+}
+
+.user a{
+    color: #007bff;
+}

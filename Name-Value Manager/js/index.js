@@ -16,6 +16,17 @@
         addBtn.style.cursor = addBtn.disabled ? 'default' : 'pointer';
     }
 
+    function addPair() {
+        const [rawName, rawValue] = inputEl.value.split('=');
+        const name = rawName.trim();
+        const value = rawValue.trim();
+        const exists = items.find(i => i.name === name);
+        if (exists) exists.value = value;
+        else items.push({name, value, selected: false});
+        inputEl.value = '';
+        addBtn.disabled = true;
+        renderList();
+    }
 
     function renderList() {
         listEl.innerHTML = '';
@@ -32,21 +43,12 @@
     }
 
     inputEl.addEventListener('input', validateInput);
-
-    addBtn.addEventListener('click', () => {
-        const [rawName, rawValue] = inputEl.value.split('=');
-        const name = rawName.trim();
-        const value = rawValue.trim();
-        const exists = items.find(item => item.name === name);
-        if (exists) {
-            exists.value = value;
-        } else {
-            items.push({name, value, selected: false});
+    inputEl.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' && !addBtn.disabled) {
+            e.preventDefault();
+            addPair();
         }
-        inputEl.value = '';
-        addBtn.disabled = true;
-        renderList();
-    })
+    });
 
     deleteBtn.addEventListener('click', () => {
         for (let i = items.length - 1; i >= 0; i--) {
@@ -54,6 +56,8 @@
         }
         renderList();
     });
+
+    addBtn.addEventListener('click', addPair);
 
     sortNameBtn.addEventListener('click', () => {
         items.sort((a, b) => {

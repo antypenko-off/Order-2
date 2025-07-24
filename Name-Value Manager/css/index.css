@@ -116,13 +116,20 @@ h1 {
 
 /* Phones 0 - 480px */
 @media (max-width: 480px) {
+    .box-label{
+        font-size: 18px;
+    }
+
+    #nv-input::placeholder {
+        font-size: 18px;
+    }
+
     h1 {
         font-size: 20px;
     }
-
     .container {
         width: 95%;
-        margin-top: 24px;
+        margin-top: 32px;
     }
 
     #nv-list {
@@ -131,17 +138,43 @@ h1 {
     }
 
     .control-buttons {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
         gap: 10px;
     }
 
+    .item-adder {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+    }
+
     .control-buttons button {
+        flex: 1 1 calc(50% - 6px);
+    }
+
+    .item-list-container {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    #nv-input,
+    .item-adder button {
         width: 100%;
     }
 }
 
 /* Tablets & Phones 480 - 768px */
-@media (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 768px) {
+
+    .box-label{
+        font-size: 16px;
+    }
+
+    #nv-input::placeholder {
+        font-size: 16px;
+    }
+
     .container {
         margin-top: 40px;
         width: 90%;
@@ -156,7 +189,7 @@ h1 {
         width: 100%;
     }
 
-    .item-adder input,
+    #nv-input,
     .item-adder button {
         width: 100%;
     }
